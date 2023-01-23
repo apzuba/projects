@@ -1,4 +1,4 @@
-A showcase user management system for a game.
+A showcase user management system for a game (Flask + SQL).
 Autor: @Adam Zuba
 
 
