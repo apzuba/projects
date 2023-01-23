@@ -10,6 +10,6 @@ during my learning with Learn Python 3 The Hard Way textbook
   The functions I am most proud of include: multi-choice combat system, end-of-mission raporting system, 
   compliments generator (a victory gift), HP and inventory module, gold and the scenario. Warning, the game isn't easy! :)
 
-- REST_learning - an example of basic usage of the REST Api with Flask
+- REST_learning - an example of a basic usage of the REST Api with Flask
 
 - serialising_learning.py - using the 'pickle' and 'json' modules for serialisation
