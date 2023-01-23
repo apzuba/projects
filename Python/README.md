@@ -1,4 +1,4 @@
-- LPTHW (tasks from the Learn Python The Hard Way textbook), 
+- LPTHW (showcase projects done with the Learn Python The Hard Way textbook), 
 
 - PsychoPy framework project, 
 
