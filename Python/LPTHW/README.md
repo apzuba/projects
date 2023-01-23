@@ -8,7 +8,7 @@ during my learning with Learn Python 3 The Hard Way textbook
 - my_game - a showcase, around 950 lines of code RPG game with mutiple functions and classes. 
   This game is a result of three weeks of work in my initial phase of learning. 
   The functions I am most proud of include: multi-choice combat system, end-of-mission raporting system, 
-  compliments generator (a victory gift), HP and inventory module, gold and the scenario. Warning, the game isn't easy!
+  compliments generator (a victory gift), HP and inventory module, gold and the scenario. Warning, the game isn't easy! :)
 
 - REST_learning - an example of basic usage of the REST Api with Flask
 
