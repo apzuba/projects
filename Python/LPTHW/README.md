@@ -7,6 +7,7 @@ during my learning with Learn Python 3 The Hard Way textbook
 - ex35B.py - a very simple game program demonstating using functional programming,
 - ex41.py - working with URLs and a couple of basing python functions,
 - serialising_learning.py - using the 'pickle' and 'json' modules for serialisation
+___
 
 - ex47 - an example of basic setup of a game project in a seperate environment, with simple unit test.
 - my_game - a showcase, around 950 lines of code RPG game with mutiple functions and classes. 
