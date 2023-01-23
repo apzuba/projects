@@ -12,8 +12,8 @@ Python Frameworks: Flask, Keras, PsychoPy, as well as multiple Python Packages f
 - ML-text-analysis folder includes the Jupyter Notebook files that implement various Neural Networks models for semantic text analysis in two languages. The project uses Keras framework with pandas package.
 
 - example_sql_commands.sql file includes the example SQL commands that I learned and used during the SQL courses I took. The courses include:
-   A) Simplilearn (9h, Beginner Level): Introduction to SQL 
-   B) Coursera (16h, Intermediate Level): Introduction to Structured Query Language (SQL) by 
+   - A) Simplilearn (9h, Beginner Level): Introduction to SQL 
+   - B) Coursera (16h, Intermediate Level): Introduction to Structured Query Language (SQL) by 
         prof. Charles Russell Severance, University of Michigan 
 
 - The .R folder includes .R scripts that I developed with supervision of dr. Renate Rutiku for usage in my MSc Project. The scripts operate on complex multi-level statistics.
