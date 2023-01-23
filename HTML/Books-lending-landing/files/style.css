@@ -1,0 +1,790 @@
+@import url('https://fonts.googleapis.com/css?family=Architects+Daughter');
+@import url('https://fonts.googleapis.com/css?family=Trocchi&subset=latin-ext');
+
+body {
+    margin: 0;
+    background: rgb(250, 249, 249); /* For browsers that do not support gradients */
+    background: -webkit-linear-gradient(rgb(255,255,255), rgb(120, 41, 58,0.125)); /* For Safari 5.1 to 6.0 */
+    background: -o-linear-gradient(rgb(255,255,255), rgb(120, 41, 58,0.125)); /* For Opera 11.1 to 12.0 */
+    background: -moz-linear-gradient(rgb(255,255,255), rgb(120, 41, 58,0.125)); /* For Firefox 3.6 to 15 */
+    background: linear-gradient(rgb(255,255,255), rgb(120, 41, 58,0.125)); /* Standard syntax */
+    color: #595959;
+    min-width: 300px;
+}
+
+header {
+    width: 100%;
+    position: absolute;
+    z-index: 3;
+    background-color: rgba(0,0,0,6);
+}
+
+header img {
+    height: 45px;
+    margin: 25px 0;
+}
+
+section.intro {
+    position: absolute;
+    top:95px;
+    z-index: 2;
+    width: 100%;
+}
+
+section.intro .container {
+    background-image: url("Nowy-background.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 487px;
+}
+
+section.intro .container .true-container {
+    max-width: 585px;
+
+}
+
+section.intro .main-title {
+    font-size: 36px;
+    margin-top: 25px;
+}
+
+section.intro .sub-title {
+    margin-top: 40px;
+    font-size: 18px;
+}
+
+section.testimonials {
+    margin: 45px 0 45px;
+}
+
+section.testimonials .row>div {
+    font-size: 16px;
+    padding: 35px;
+    box-sizing: border-box;
+}
+
+section.testimonials .row>div .inside {
+    padding: 25px;
+    background-color: white;
+    border-radius: 25px;
+    box-shadow: 0px 0px 50px rgba(120, 41, 58, 0.5);
+    letter-spacing: 0.5px;
+    transition: all 0.5s;
+}
+
+section.testimonials .row>div .inside:hover {
+    box-shadow: 0px 0px 100px rgba(120, 41, 58, 0.5);
+}
+
+section.testimonials div.name {
+    font-weight: bold;
+    display: block;
+    margin-bottom: 25px;
+    letter-spacing: 1px;
+    text-align: center;
+}
+
+section.network {
+    background-color: white;
+    padding: 98px 0;
+}
+
+section.network div.center-box {
+    top: 50%;
+    transform: translateY(-50%);
+    text-align: center;
+    font-size: 32px;
+    letter-spacing: 5px;
+    position: absolute;
+}
+
+section.network div.content-box {
+    height: 373px;
+    position: relative;
+}
+
+section.why {
+    background-color: #595959;
+    color: rgb(250, 249, 249);
+    padding: 110px 0;
+}
+
+section.why img {
+    margin: auto;
+    display: block;
+}
+
+section.why div.info {
+    margin-top: 55px;
+    text-align: center;
+    font-size: 18px;
+    letter-spacing: 3px;
+}
+
+span.colorise {
+    color: rgb(255, 149, 78);
+}
+
+span.colorise.red {
+    color: rgb(120, 41, 58);
+}
+
+span.heart {
+    color: rgb(120, 41, 58);
+    font-size: 36px;
+}
+
+section.apply {
+    padding: 136px 0;
+}
+
+section.apply div.title {
+    font-size: 28px;
+    padding-bottom: 36px;
+    font-weight: 500;
+    letter-spacing: 2px;
+    font-family: 'Trocchi', serif;
+}
+
+footer {
+    background-color: #595959;
+    color: rgb(250, 249, 249);
+    padding: 15px 0 55px;
+}
+
+footer .copyright {
+    margin-top: 24px;
+}
+
+form.small-form input[type='submit'] {
+    background: rgb(120, 41, 58);
+    color: white;
+    display: inline-block;
+    border: 0;
+    padding: 7px 25px;
+    border-radius: 10px;
+    font-size: 16px;
+}
+
+form input {
+    box-shadow: 0px 0px 0px rgb(120, 41, 58);
+    transition: all 0.75s;
+    -webkit-transition: all 0.75s;
+}
+
+form input[type='submit'] {
+    box-shadow: 0px 0px 25px rgba(120, 41, 58, 0.5);
+}
+
+form input:hover,
+form input:focus {
+    box-shadow: 0px 0px 25px rgb(120, 41, 58);
+}
+
+form.small-form input[type='email'] {
+    border: 4px solid rgb(120, 41, 58);
+    border-radius: 10px;
+    padding: 4px 15px;
+    margin-right: -18px;
+    width: 242px;
+    margin-top: 78px;
+}
+
+form.small-form input[type='submit'].button-short {
+    display: none;
+}
+
+form.big-form input[type='email'] {
+    border: 2px solid rgb(120, 41, 58);
+    width: 90%;
+    max-width: 600px;
+    padding: 10px 20px;
+    font-size: 18px;
+    border-radius: 10px;
+    display: block;
+    margin: 36px auto;
+}
+
+form.big-form input[type='submit'] {
+    background: rgb(120, 41, 58);
+    color: white;
+    border: 0;
+    display: block;
+    margin: auto;
+    padding: 10px 50px 10px 25px;
+    font-size: 14px;
+    border-radius: 10px;
+    background-image: url('screen.png');
+    background-repeat: no-repeat;
+    background-size: 28px;
+    background-position: 130px center;
+    letter-spacing: 2px;
+}
+
+.copyright img {
+    width: 25px;
+    margin-left: 30px;
+    margin-top: -4px;
+}
+
+input.copy-input {
+    width: 100%;
+    text-align: center;
+    border: 0;
+}
+
+section.steps {
+    padding: 90px 0;
+}
+
+section.steps .steps-grid .title {
+    font-size: 22px;
+    margin: 30px 0 15px;
+}
+
+section.steps .steps-title {
+    margin: 0 0 50px;
+    font-size: 28px;
+    letter-spacing: 1.5px;
+}
+
+section.steps .circle-timeline {
+    border-top: 1px solid rgb(166,187,188);
+}
+
+section.steps .circle-grid {
+    margin-left: 0;
+}
+
+section.steps .circle-grid > div{
+    margin-left: 0;
+}
+
+
+section.steps .circle-grid > div:first-child{
+    margin-left: 10px;
+    width: calc(25% - 10px);
+}
+
+section.steps .circle-grid > div:nth-child(3) {
+    width: calc(25% + 15px);
+}
+
+section.steps .circle-grid > div:last-child {
+    width: calc(25% - 15px);
+}
+
+
+section.steps .circle-grid > div .circle {
+    margin-left: 15px;
+}
+
+section.steps .circle-grid > div:first-child .circle{
+    margin-left: 0;
+}
+
+section.steps .circle-grid > div:last-child .circle{
+    margin-left: 0;
+}
+
+section.steps .circle-grid .circle {
+    border: 1px solid rgb(166,187,188);
+    height: 25px;
+    width: 25px;
+    text-align: center;
+    border-radius: 25px;
+
+    top: -12px;
+    position: absolute;
+    left: 0;
+    background-color: rgb(250,249,249);
+    color:rgb(166,187,188);
+}
+
+section.steps .steps-grid .circle {
+    border: 1px solid rgb(166,187,188);
+    width: 40px;
+    height: 40px;
+    text-align: center;
+    border-radius: 30px;
+    margin: 15px auto;
+    color:rgb(166,187,188);
+}
+
+section.steps .steps-grid .description {
+    color:rgb(166,187,188);
+}
+
+.no-padding {
+    padding: 0;
+}
+
+.no-padding-left {
+    padding-left: 0;
+}
+
+@media(max-width: 1199px) {
+    section.intro .main-title {
+        font-size: 28px;
+    }
+
+    section.intro .sub-title {
+        font-size: 18px;
+    }
+
+    section.network div.center-box {
+        font-size: 28px;
+    }
+
+    section.network div.content-box {
+        height: 308px;
+    }
+
+    section.why {
+        padding: 55px 0;
+    }
+
+    section.why div.info {
+        margin-top: 25px;
+    }
+
+    form.small-form input[type='email'] {
+        width: unset;
+    }
+
+    section.intro .container {
+        background-position: -100px center;
+    }
+}
+
+@media(max-width: 991px) {
+    section.intro .container {
+        height: 244px;
+        background-position: unset;
+    }
+
+    section.intro .main-title {
+        font-size: 26px;
+        margin-top: 0;
+    }
+
+    section.intro .sub-title {
+        margin-top: 15px;
+        font-size: 16px;
+    }
+
+    section.testimonials {
+        margin: 10px 0;
+    }
+
+    section.testimonials .row>div {
+        padding: 30px 15px;
+        border-radius: 25px;
+    }
+    section.network div.content-box {
+        height: 233px;
+    }
+    section.network div.center-box {
+        letter-spacing: 4px;
+        font-size: 20px;
+    }
+
+    section.network, section.steps {
+        padding: 45px 0;
+    }
+
+    form.small-form input[type='email'] {
+        margin-top: 20px;
+    }
+
+
+    .copyright img {
+        margin-left: 10px;
+    }
+
+    section.steps .circle-grid {
+        margin-left: -15px;
+    }
+
+    section.steps .circle-grid > div .circle {
+        margin-left: 10px;
+    }
+
+    section.steps .circle-grid > div:nth-child(3) {
+        width: calc(25% + 10px);
+    }
+
+    section.steps .circle-grid > div:last-child {
+        width: calc(25% - 10px);
+    }
+}
+
+@media(max-width: 767px) {
+    section.intro .container {
+        background-position: -120px 0;
+    }
+    section.intro .true-container {
+        background-color: rgba(255, 255, 255, 0.75);
+        padding: 15px 30px;
+        margin-top: 12px;
+    }
+
+    header img {
+        margin: 20px 0;
+    }
+
+    section.testimonials {
+        margin: 10px 0;
+    }
+
+    section.network img {
+        width: 80%;
+        max-width: 350px;
+        margin: auto;
+    }
+
+    section.network div.center-box {
+        position: relative;
+        margin: 45px auto 0;
+        top: unset;
+        transform: unset;
+    }
+
+    section.network div.content-box {
+        height: auto;
+        letter-spacing: 3px;
+        font-size: 18px;
+    }
+
+    section.why .why-box {
+        margin-top: 55px;
+    }
+
+    .mobile-center {
+        text-align: center;
+    }
+
+    section.apply {
+        padding: 36px 0;
+    }
+
+    section.apply div.title {
+        font-size: 28px;
+        padding-bottom: 0;
+    }
+
+    .copyright img {
+        display: block;
+        margin: auto;
+        margin-top: 15px;
+    }
+
+    section.steps .title br {
+        display: none;
+    }
+
+    section.steps {
+        text-align: center;
+    }
+
+    section.steps .steps-title {
+        margin: 0;
+    }
+}
+
+@media(max-width: 688px) {
+
+    section.intro .main-title {
+        font-size: 22px;
+    }
+
+    section.intro .sub-title {
+        font-size: 14px;
+    }
+}
+
+@media(max-width: 596px) {
+    form.small-form input[type="email"],
+    section.intro .sub-title {
+        margin-top: 10px;
+    }
+}
+
+@media(max-width: 530px) {
+    section.apply div.title {
+        font-size: 24px;
+    }
+
+    form.big-form input[type="email"] {
+        font-size: 16px;
+    }
+}
+
+@media(max-width: 496px) {
+    section.intro .main-title {
+        font-size: 20px;
+    }
+
+    section.intro .sub-title {
+        margin-top: 8px;
+        font-size: 14px;
+    }
+
+    header img {
+        margin: 10px 0;
+        height: 30px;
+    }
+
+    form.small-form input[type='email'] {
+        width: 150px;
+    }
+}
+
+@media(max-width: 442px) {
+    section.intro .true-container {
+        margin-top: 6px;
+    }
+
+    form.small-form input[type='submit'].button-short {
+        display: unset;
+    }
+
+    form.small-form input[type='submit'].button-long {
+        display: none;
+    }
+
+    form.big-form input[type="email"] {
+        margin: 18px auto;
+    }
+}
+
+@media(max-width: 396px) {
+    section.intro .main-title {
+        font-size: 18px;
+    }
+
+    section.intro .sub-title {
+        margin-top: 8px;
+        font-size: 12px;
+    }
+
+    form.small-form input[type="email"] {
+        padding: 4px 5px;
+        margin-right: -20px;
+        width: 125px;
+        font-size: 12px;
+    }
+
+    form.small-form input[type='submit'] {
+        padding: 8px 15px;
+        font-size: 12px;
+    }
+}
+
+@media(min-width: 350px) and (max-width: 596px) {
+    strong.block {
+        display: block;
+    }
+}
+
+@media(max-width: 332px) {
+    section.intro .true-container {
+        margin-top: 3px;
+    }
+    section.intro .true-container {
+        padding: 10px 20px;
+    }
+}
+
+@media(min-width: 992px) {
+    section.steps .steps-grid .step {
+        padding-left: 30px;
+        padding-right: 30px;
+    }
+}
+
+
+
+/* my styles */
+
+img.img-center {
+    margin: auto;
+}
+
+div.border-right {
+    border-right: 1px solid;
+}
+
+
+
+
+/* thank-you */
+
+header.thank-you {
+    background-color: rgb(10, 1, 80);
+    color: white;
+}
+
+header.thank-you img {
+    margin: 20px 0;
+}
+
+header.thank-you div.headline,
+header.thank-you div.headline-mobile {
+    font-size: 23px;
+    text-transform: uppercase;
+    margin: 25px 0;
+    letter-spacing: 1.5px;
+}
+
+section.thank-you-intro .container {
+    background-image: url("book.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    height: 600px;
+    margin-top: 50px;
+}
+
+section.thank-you-intro div.book-container {
+    padding-top: 70px;
+    padding-left: 35px;
+    font-size: 42px;
+    padding-right: 25px;
+    text-align: center;
+    text-transform: uppercase;
+    font-family: 'Architects Daughter', cursive;
+    color: rgb(120, 41, 58);
+}
+
+section.thank-you-intro div.thank-you-container div.headline {
+    margin-top: 110px;
+    font-size: 22px;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+section.thank-you-intro div.thank-you-container div.subline {
+    margin: 20px 0;
+    text-transform: uppercase;
+    font-size: 30px;
+    text-align: center;
+    font-weight: 500;
+    color: rgb(10, 1, 80);
+}
+
+section.thank-you-intro div.thank-you-container div.description {
+    font-size: 16px;
+    text-align: center;
+    margin: 0 20px;
+}
+
+section.thank-you-intro div.thank-you-container div.code {
+    background-color: white;
+    margin: 50px 0 30px;
+    padding: 12px 15px;
+    text-align: center;
+    font-weight: bold;
+}
+
+section.apply div.subtitle {
+    font-size: 22px;
+    text-align: center;
+}
+
+section.apply div.social-button {
+    margin: 40px 0 120px;
+}
+
+section.thank-you-apply {
+    background-color: white;
+    padding-bottom: 200px;
+}
+
+section.thank-you-apply div.subtitle {
+    letter-spacing: 1px;
+}
+
+@media(max-width: 991px) {
+    section.thank-you-intro .container {
+        background-position: center;
+        height: 500px;
+        margin-top: 0px;
+    }
+
+    section.thank-you-intro div.thank-you-container div.headline {
+        margin-top: 300px;
+    }
+
+    section.thank-you-intro div.book-container {
+        font-size: 32px;
+    }
+
+    section.thank-you-apply {
+        margin-top: 440px;
+        padding: 60px 0;
+    }
+}
+
+@media(max-width: 767px) {
+    section.thank-you-intro .container {
+        max-width: 375px;
+        width: 100%;
+        height: 370px;
+    }
+
+    section.thank-you-intro div.book-container {
+        padding-top: 60px;
+        font-size: 22px;
+    }
+
+    section.thank-you-apply {
+        margin-top: 575px;
+        padding: 50px 0;
+    }
+
+    section.thank-you-apply div.subtitle {
+        margin-top: 20px;
+    }
+
+    section.thank-you-intro div.thank-you-container div.headline {
+        margin-top: 230px;
+    }
+}
+
+@media(max-width: 496px) {
+
+    header.thank-you div.headline-mobile {
+        font-size: 22px;
+        text-transform: uppercase;
+        margin: 19px 0;
+    }
+
+    section.thank-you-apply div.subtitle {
+        font-size: 18px;
+    }
+
+    section.thank-you-intro div.thank-you-container div.headline {
+        font-size: 18px;
+    }
+
+    section.thank-you-intro div.thank-you-container div.headline {
+        margin-top: 225px;
+    }
+
+    section.thank-you-intro div.thank-you-container div.subline {
+        font-size: 22px;
+    }
+
+    section.thank-you-intro div.thank-you-container div.description {
+        font-size: 14px;
+        margin: 0;
+    }
+
+    section.thank-you-apply {
+        margin-top: 475px;
+    }
+
+    section.apply div.social-button {
+        margin: 40px 0;
+    }
+}
