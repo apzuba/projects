@@ -1,0 +1,241 @@
+<html>
+<head>
+  <meta charset="utf-8"/>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+
+  <link href="https://fonts.googleapis.com/css?family=Montserrat|Roboto&display=swap" rel="stylesheet">
+  <link type="text/css" rel="stylesheet" href="bootstrap.min.css" />
+</head>
+  <title>Prywatna klinika endokrynologiczna "Cud-zdrowie"</title>
+</head>
+
+<body bgcolor="lightblue">
+
+
+  <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
+    <div class="container">
+      <a class="navbar-brand" href="#"><img src="https://cdn.pixabay.com/photo/2014/04/03/11/47/pharmacy-312139_960_720.png" width="60" padding ="0px 15px"/>&nbsp; &nbsp; Prywatna klinika endokrynologiczna "Cud-zdrowie"</a>
+    </div>
+
+    <div class="container">
+      <div class="collapse navbar-collapse" id="navbarResponsive">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item active">
+            <a class="nav-link" href="#">Strona główna
+                  <span class="sr-only">(current)</span>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="Podstrony/O_klinice.html">O klinice</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="Podstrony/Cennik.html">Cennik</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="Podstrony/Kontakt.html">Kontakt</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+
+</br></br></br></br>
+
+<div id="info">
+
+  <div id="pierw">
+  </div>
+  <p id="next"> Klinika "Cud-zdrowie" może poszczycić się wysokimi kwalifikacjami naszych pracowników w szczególności w następujących specjalizacjach:</br></br>
+
+    Pełna diagnostyka oraz leczenie zaburzeń funkcjonowania gruczołów wydzielania wewnętrznego (nadnercza, gruczoł tarczowy, przytarczyce, podwzgórze, przysadka mózgowa, jajniki, jądra), w szczególności:
+badania diagnostyczne oraz laboratoryjne (np. oznaczenia stężeń hormonów, testy dynamiczne i obrazowe / ultrasonografia),
+zastosowanie najlepszego sposobu leczenia zaburzeń funkcjonowania gruczołów wydzielania wewnętrznego.</br></br></p>
+
+  <div id="wybor">
+    <button id="przycisk" onclick="getClicked(this)">Aby uzyskać więcej informacji, proszę wybrać rodzaj leczenia:</button>
+
+    <select id="select" onchange="getSelected(this)" onclick="szczeg.removeChild(obrazek);
+    szczeg.removeChild(slowo_zabieg); szczeg.removeChild(teks)">
+      <option value="ACTH">ACTH-zależnego i ACTH niezależnego zespołu Cushinga</option>
+      <option value="akro">Akromegalii</option>
+      <option value="nadnercza">Przerostu nadnerczy</option>
+      <option value="przys">Wieloosiowej niedoczynności przysadki</option>
+      <option value="orbit">Orbitopatii tarczycowej w przebiegu choroby Graves-Basedova</option>
+    </select>
+  </div>
+
+  <div id="szczeg"></div>
+
+</div>
+
+  <script language="javaScript" src="bootstrap.bundle.min.js"></script>
+  <script language="javaScript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.slim.min.js"></script>
+  <script language="javaScript" src="jquery.slim.min"></script>
+  <script lang="javaScript">
+
+
+  // ----SEKCJA WYGLĄDU -----//
+
+
+  $('body').css({
+            'backgroundImage': "url('https://images.pexels.com/photos/1282308/pexels-photo-1282308.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940')",
+            'backgroundRepeat': "no-repeat",
+            'backgroundSize': "cover",
+            'font-family': "'Montserrat', sans-serif;"
+      });
+
+  //NAVBAR
+
+  $('li a').css({'display': "inblock",
+            'textAlign': "center",
+            'float': 'left',
+            'fontSize': "1.1em",
+            'width': "160px",
+            'textDecoration': "none",
+            'color': "black",
+            'backgroundColor': "lightblue",
+            'border-radius': '10px',
+
+            'opacity': "0.9",
+            'padding': "10px 15px",
+            'margin': "0px 2px 2px 2px",
+            });
+
+  $('li a').hover(function(){
+    $(this).css({ 'opacity': "0.5", 'color': "white", 'backgroundColor': "#0583F2"});
+    }, function(){
+    $(this).css({'opacity': "0.8", 'color': "black", 'backgroundColor': "lightblue"});
+  });
+
+// STRONA GLOWNA
+
+$('#info').css({'width': "1000px",
+                'height': '1000px',
+                'margin':"20px",
+                'float':"left",
+                'backgroundColor':"white",
+                'opacity':"0.9",
+                'border-radius': '10px' });
+
+$('#pierw').css({'margin':"20px",});
+$('#next').css({'margin':"20px",});
+$('#przycisk').css({'margin':"20px",
+                'backgroundColor': "lightblue",
+                'border-radius': '5px',
+                'padding': "10px 15px",
+
+});
+
+$('#select').css({'margin':"10px",
+                'backgroundColor': "lightblue",
+                'border-radius': '5px',
+                'height': '46px',
+                'width': '400px',
+                'font-weight': 'bold',
+
+});
+
+$('#szczeg').css({'margin':"20px"});
+
+// ------SEKCJA SKRYPTU-------
+
+  tagH1 = document.createElement('h1');
+  zawH1 = document.createTextNode('Prywatna klinika endokrynologiczna "Cud-zdrowie"');
+  tagH1.appendChild(zawH1);
+  pierw.appendChild(tagH1);
+
+  tagH3 = document.createElement('h5');
+  zawH3 = document.createTextNode("W celu uzyskania szczegółowej informacji prosimy o kontakt telefoniczny lub wypełnienie formularza (zakładka kontakt)");
+  tagH3.appendChild(zawH3);
+  next.appendChild(tagH3);
+
+  function Zabieg(kto, url, tekst){
+
+    this.kto = kto;
+    this.url = url;
+    this.tekst = tekst;
+
+    slowo_zabieg = document.createElement('h2');
+    zaw_slowo_zabieg = document.createTextNode("Leczenie " + this.kto);
+    slowo_zabieg.appendChild(zaw_slowo_zabieg);
+    szczeg.appendChild(slowo_zabieg);
+
+    obrazek = document.createElement("img");
+    obrazek.src = this.url;
+    szczeg.appendChild(obrazek).height="300";
+
+    teks = document.createElement('h5');
+    tekst_zaw = document.createTextNode(this.tekst);
+    teks.appendChild(tekst_zaw);
+    szczeg.appendChild(teks);
+
+  }
+
+
+  function getSelected(select) {
+
+    if (select.options[select.selectedIndex].value == "ACTH") {
+      new Zabieg("zespołu Cushinga", "https://upload.wikimedia.org/wikipedia/commons/thumb/d/dd/Cushing%27s_syndrome.png/800px-Cushing%27s_syndrome.png",
+        "Zespół Cushinga to zespół różnorodnych objawów klinicznych związanych z podwyższonym stężeniem glikokortykosteroidów (GKS) we krwi. \
+        GKS to hormony wytwarzane przez nadnercza, wewnątrzwydzielnicze gruczoły obwodowe położone obustronnie powyżej górnych biegunów nerek.");
+    }
+
+    if (select.options[select.selectedIndex].value == "akro") {
+      new Zabieg("akromegalii", "https://www.medexpress.pl/uploads/2018/11/Beztytulu-32-1280x578.jpg",
+        "Akromegalia jest chorobą przewlekłą związaną z nadmiernym wydzielaniem hormonu wzrostu. \
+        Charakteryzuje się postępującą stopniowo zmianą wyglądu zewnętrznego oraz wieloma powikłaniami narządowymi. \
+        Akromegalia występuje u osób dorosłych, u których zakończony został proces wzrastania kości. \
+        Natomiast u dzieci i młodzieży nadmiar hormonu wzrostu prowadzi do tzw. gigantyzmu (nadmiernego wzrostu ciała).");
+    }
+
+    if (select.options[select.selectedIndex].value == "nadnercza") {
+      new Zabieg("przerostu nadnerczy",
+        "http://nextews.com/images/79/09/790963e67e3a0ecf.jpg",
+        "Wrodzony przerost nadnerczy (WPN) należy do grupy chorób, których przyczynę stanowią zaburzenia genetyczne, prowadzące do nieprawidłowej funkcji nadnerczy.\
+         Nadnercza są zaliczane do gruczołów wydzielania wewnętrznego. Produkują hormony, odpowiedzialne za prawidłowe funkcjonowanie organizmu (kortyzol, aldosteron, androgeny). \
+         Zlokalizowane są obustronnie, powyżej nerek. Zbudowane są z położonej zewnętrznie kory i wewnętrznego rdzenia. U osób z wrodzonym przerostem nadnerczy nie występują\
+          substancje niezbędne do prawidłowego funkcjonowania nadnerczy (enzym, warunkujący przemiany chemiczne – najczęściej jest to 21-hydroksylaza).");
+    }
+
+    if (select.options[select.selectedIndex].value == "przys") {
+      new Zabieg("wieloosiowej niedoczynności przysadki",
+        "https://journals.viamedica.pl/hematologia/article/viewFile/49470/40720/127685",
+        "Niedoczynność przysadki to schorzenie związane z brakiem lub niedostatecznym wydzielaniem jednego lub kilku hormonów przysadki \
+        - gruczołu wydzielania wewnętrznego położonego w środkowym dole czaszkowym. Jej wyspecjalizowane komórki wytwarzają hormony pobudzające \
+        obwodowe gruczoły dokrewne, takie jak tarczyca, nadnercza, gonady (jajniki, jądra) do syntezy (wytwarzania) i wydzielania hormonów niezbędnych do\
+         prawidłowego funkcjonowania organizmu.");
+    }
+
+    if (select.options[select.selectedIndex].value == "orbit") {
+      new Zabieg("choroby Graves-Basedova",
+        "https://gfx.zdrowie.radiozet.pl/var/radiozetzdrowie/storage/images/choroby/endokrynologia/choroba-gravesa-basedowa-wynika-z-tzw.-autoagresji.-jak-rozpoznac-objawy-choroby/343053-1-pol-PL/Choroba-Gravesa-Basedowa-wynika-z-tzw.-autoagresji.-Jak-rozpoznac-objawy-choroby_article.jpg",
+        "Choroba Gravesa-Basedowa to choroba gruczołu tarczowego o podłożu autoimmunologicznym będąca przyczyną nadczynności tarczycy. \
+        Istotną rolę w zachorowalności odgrywa predyspozycja dziedziczna - wykazano rolę HLA-DR3 i genu CTLA-4. \
+        Choroba występuje 10-krotnie częściej u kobiet niż u mężczyzn, często ujawnia się po porodzie.");
+    }
+  }
+
+  function getClicked(click) {
+      alert("Proszę wybrać rodzaj leczenia by uzyskać informację.");
+      return false;
+  }
+
+  $('h1').click(function(){
+    $(this).css('color', 'blue');
+  });
+
+  $('h5').click(function(){
+    $(this).hide();
+    alert("Uwaga: informacja zostaje ukryta.");
+    window.open("Podstrony/Kontakt.html");
+  });
+
+
+  </script>
+
+
+
+
+</body>
+</html>
