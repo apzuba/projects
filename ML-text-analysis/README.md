@@ -17,4 +17,4 @@ The project implemented:
 
 The project was developed in Jupyter Notebook IDE, using Keras ML framework, following an online Machine-Learning Tutorial and under a supervisor of prof. dr. hab. inż. Grzegorz Nalepa. The project was a course project for the class of Workshops in Cognitive Engineering at Jagiellonian University.
 
-I attatched the saved Jupyter output files from the stages of 1) Preprocessing + implementing Naive Bayes 2) implementation of the three ML models
+I attatch the saved Jupyter output files from the stages of 1) Preprocessing + implementing Naive Bayes 2) implementation of the three ML models.
