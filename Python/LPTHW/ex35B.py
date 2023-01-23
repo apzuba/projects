@@ -8,13 +8,13 @@ def gold_room():
     if int(choice):
         how_much = int(choice)
     else:
-        dead("man, learn totype a number")
+        dead("please type the correct number")
 
     if how_much < 50:
         print("nice, not greedy, you win")
         exit(0)
     else:
-        dead("you greedy bastardo")
+        dead("don't be that greedy!")
 
 
 def bear_room():
@@ -28,27 +28,27 @@ def bear_room():
         choice = input ("A) take honey\tB)taunt bear\tC) open door\n> ")
 
         if choice == "take honey":
-            dead("bear slaps your cheek and mumu")
+            dead("bear slaps your cheek")
         elif "taunt" in choice:
             n = random.randint(0,20)
             if n >= 12:
                 bear_moved = True
-                print(f"{n}\nbear moved through the door\n you can go throight it")
+                print(f"{n}\nbear moved through the door\n you can go throught it")
             elif 7 < n < 11:
                 bear_moved = False
                 print(f"{n}\nnothin happens but bear ignores you, try again")
             else:
                 bear_moved = False
-                dead(f"{n}\nno leg man, bear has it")
+                dead(f"{n}\nthe bear got aggressive.")
         elif "open" in choice and bear_moved:
             gold_room()
         else:
-            print("i got not ideawhat you mean man")
+            print("Please type correctly")
 
 def cthulhu_room():
     print("Here you see the great evil Cthulhu.")
-    print("He, it, whatever stares at you and you go insane.")
-    print("Do you flee for your life or eat your head?")
+    print("It stares at you and you go insane.")
+    print("Do you flee for your life or shook your head?")
 
     choice = input("> ")
 
@@ -60,7 +60,7 @@ def cthulhu_room():
         cthulhu_room()
 
 def dead(why):
-    print(why, "good job\t YOU LOSE")
+    print(why, "oh no\t YOU LOSE")
     exit(0)
 
 def start():
@@ -80,7 +80,7 @@ def start():
         elif 0 < trial < 3:
             print(f"try again. {3 - trial} more chances.")
         else:
-            dead("no more chances. you starve man")
+            dead("no more chances. you starve.")
 
 
 start()
