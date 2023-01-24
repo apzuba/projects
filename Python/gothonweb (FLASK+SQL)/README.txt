@@ -1,5 +1,5 @@
-A showcase user management system for a game (Flask + SQL).
-Autor: @Adam Zuba
+A showcase users management system for a web-based python game (Flask + SQL).
+Author: @Adam Zuba
 
 
 0. Unpack 'lib' zip files in both 'gothon' and 'gothonweb' folders.
