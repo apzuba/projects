@@ -17,7 +17,7 @@ Welcome! This directory contains some of the programming projects that I worked 
 
 - The .R folder includes .R scripts that I developed with supervision and support of dr. Renate Rutiku for usage in my MSc Project. The scripts operate on complex multi-level statistics.
 
-- HTML folder includes two example websites: 1) a Health Clinique that uses simple JavaScript scripts for features such as drag-drop menus, or forms; 2) A books-lending project with CSS.
+- HTML folder includes two example websites: 1) a Health Clinique that uses simple JavaScript scripts for features such as drag-drop menus, or forms; 2) A books-lending project website with CSS.
 
  
    
