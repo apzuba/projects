@@ -2,7 +2,9 @@
 
 - PsychoPy framework project, 
 
-- algorithms scripts with use of various Python packages/modules, 
+- Algorithms scripts with use of various Python packages/modules, 
+
+- ML-Keras folder includes the Jupyter Notebook files that implement various Neural Networks models for semantic text analysis for two languages. The project uses Keras framework with pandas package.
 
 - Gothonweb: a showcase for a Python-game hosted via Flask and using SQL, 
     with working user database management system 
