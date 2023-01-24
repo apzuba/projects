@@ -8,7 +8,7 @@ Welcome! This directory contains some of the programming projects that I worked 
 @Python Frameworks: Flask, Keras, PsychoPy, as well as multiple Python Packages found within.
 
 
-- Python folder contains the folders LPTHW (tasks from the Learn Python The Hard Way textbook), PsychoPy, algorithmic scripts, a Machine Learning Keras project, and a showcase for a Python-game hosted via Flask, integrated with SQL. The showcase project demonstrates a working user database management system (Login, Registrateion, User deleting, Edit, Admin Panel, Feedback popups and more). 
+- Python folder contains the folders LPTHW (tasks from the Learn Python The Hard Way textbook), PsychoPy, algorithmic scripts, a Machine Learning Keras project, and a showcase project of a user management system for a Python-game hosted via Flask and integrated with SQL. 
 
 - example_sql_commands.sql file includes the example SQL commands that I learned and used during the SQL courses I took. The courses include:
    - A) Simplilearn (9h, Beginner Level): Introduction to SQL 
