@@ -1,4 +1,4 @@
-- LPTHW (showcase projects done with the Learn Python The Hard Way textbook), 
+- LPTHW (showcase projects done during the learning with the Learn Python The Hard Way textbook), 
 
 - ML-Keras folder includes the Jupyter Notebook files that implement various Neural Networks models for semantic text analysis for two languages. The project uses Keras framework with pandas package,
 
