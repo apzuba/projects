@@ -1,5 +1,7 @@
 #Project: Modelling semantic, machine-learning-based text analysis. 
 
+@authors: Adam Zuba, Paweł Ciślik, Agnija Bogdaniuk, Supervision: prof. dr. hab. inż. Grzegorz Nalepa
+
 Regonising the semantic valence of a text is a complex function. The goal of the project was to train and choose the best Machine Learning model for recognising the emotional valence of a text, adjusting the multi-factor influences. The models were trained and used in both the English and Polish languages. 
 
 0. Selected filters, machine learning techniques, and text complexity.
