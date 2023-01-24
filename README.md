@@ -3,8 +3,9 @@ Author: @Adam Zuba
 
 This directory contains some of the programming projects that I worked on until this point.
 
-The technologies found here include: Python, SQL, HTML & CSS, JavaScript and .R.
-Python Frameworks: Flask, Keras, PsychoPy, as well as multiple Python Packages found within.
+@The technologies found here include: Python, SQL, HTML & CSS, JavaScript and .R.
+
+@Python Frameworks: Flask, Keras, PsychoPy, as well as multiple Python Packages found within.
 
 
 - Python folder contains the folders LPTHW (tasks from the Learn Python The Hard Way textbook), PsychoPy, algorithmic scripts, a Machine Learning Keras project, and a showcase for a Python-game hosted via Flask, integrated with SQL. The showcase project demonstrates a working user database management system (Login, Registrateion, User deleting, Edit, Admin Panel, Feedback popups and more). 
