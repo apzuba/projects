@@ -1,7 +1,7 @@
 # projects
 Author: @Adam Zuba
 
-This directory contains some of the programming projects that I worked on until this point.
+Weclome! This directory contains some of the programming projects that I worked on until this point.
 
 @The technologies found here include: Python, SQL, HTML & CSS, JavaScript and .R.
 
