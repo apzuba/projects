@@ -23,6 +23,12 @@ The project was developed in Jupyter Notebook IDE, using Keras ML framework with
 
 I attatch the saved Jupyter output files from the stages of: 
 
-PL: 1) Data scrapping script 2) Preprocessing + implementing Naive Bayes 3) implementation of the three ML models.; 
+PL: 
 
-EN: 1) Full scriptt for data preprocessing and implementation of the three Neural Networks.
+1) Data scrapping script 
+2) 2) Preprocessing + implementing Naive Bayes 
+3) 3) implementation of the three ML models.; 
+
+EN: 
+
+1) Full scriptt for data preprocessing and implementation of the three Neural Networks.
