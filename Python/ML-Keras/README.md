@@ -4,9 +4,9 @@
 
 Regonising the semantic valence of a text is a complex function. The goal of the project was to train and choose the best Machine Learning model for recognising the emotional valence of a text, adjusting the multi-factor influences. The models were trained and used in both the English and Polish languages. The database for the Polish langauge was scrapped with a script from a populer film reviews website (filmweb.pl).
 
-- Selected filters, machine learning techniques, and text complexity.
-
 The project implemented:
+
+- Selected filters, machine learning techniques, and text complexity.
 
 0. Scrapping data from the internet to get the database for the Polish language
 1. Data pre-processing
