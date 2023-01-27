@@ -1,5 +1,7 @@
 from imie_script import imie_1
 
+
+#The compliment generator module
 class Komplement():
 
     def kompl():
@@ -35,10 +37,11 @@ class Komplement():
         #     porow = Porownanie.pop(random.randint(0,len(Porownanie)-1))
         #     rzecz_komp = Rzeczownik_komplementu.pop(random.randint(0,len(Rzeczownik_komplementu)-1))
 
-        #personalizacja w zależności od płci
+        #personalisation for the sex of the player
             if imie[-1] == 'a':
                 imie = imie[0:len(imie) - 1] + 'o'
 
+                #print compliment female function
                 def druk_k():
 
                     ob_kompl_meski = Obiekt_komplementu_meski.pop(randint(0,len(Obiekt_komplementu_meski)-1))
@@ -58,6 +61,8 @@ class Komplement():
 
                     print(f" \nDroga {imie}, Twój {ob_kompl_meski} {czas} \n{przym} {porow} {rzecz_komp}. \n \t\t\t --Dla Ciebie, Adam")
 
+                    
+                    #get more compliments
                     powrtorka = input("Czy chcesz jeszcze raz? (t/n) >")
 
                     if powrtorka == 'n':
@@ -69,6 +74,7 @@ class Komplement():
                 druk_k()
 
             else:
+                #print compliment male function
                 def druk_m():
 
                     ob_kompl_meski = Obiekt_komplementu_meski.pop(randint(0,len(Obiekt_komplementu_meski)-1))
