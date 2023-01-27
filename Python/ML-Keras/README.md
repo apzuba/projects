@@ -7,6 +7,7 @@ Regonising the semantic valence of a text is a complex function. The goal of the
 - Selected filters, machine learning techniques, and text complexity.
 
 The project implemented:
+
 0. Scrapping data from the internet to get the database for the Polish language
 1. Data pre-processing
 2. Data tokenisation
