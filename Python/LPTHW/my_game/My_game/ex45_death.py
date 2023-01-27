@@ -1,3 +1,5 @@
+#The death module (end of the game - lost).
+
 class Death():
 
     def gogo():
