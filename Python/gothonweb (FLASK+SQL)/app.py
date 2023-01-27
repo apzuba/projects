@@ -189,26 +189,31 @@ def delete():
         password = request.form['password']
         try:
             user = [x for x in users if x.username == username][0]
-            if user and user.password == password:          #password is correct, deleting the account
+            
+            #password is correct, deleting the account
+            if user and user.password == password:   
                 user_del = User.query.get_or_404(user.id) 
                 db.session.delete(user_del)
                 db.session.commit()
                 new_user.clear()
                 new_user.append(7)
                 return redirect(url_for('login', new_user=new_user[0]))
-
-            elif try_del_value.value < 3:     #password incorrect, up to two more chances to type the correct one
+            
+            #password incorrect, up to two more chances to type the correct one
+            elif try_del_value.value < 3:     
                 new_user.clear()
                 new_user.append(8)
                 del_try()
                 return render_template('delete.html', new_user=new_user[0])
 
-            else:                             #password incorrect, no more tries left. Redirects to the login page
+            #password incorrect, no more tries left. Redirects to the login page
+            else:                          
                 new_user.clear()
                 new_user.append(9)
                 return render_template('login.html', new_user=new_user[0])
 
-        except:                               #No such user in the database, up to two more tries again 
+        #No such user in the database, up to two more tries again
+        except:                                
             new_user.clear()
             new_user.append(8)
             del_try()
