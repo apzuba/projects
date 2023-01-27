@@ -38,9 +38,10 @@ class Engine():
 
         current_scene.gogo()
 
-
+#Scenarios classess
 class WejscieSmoka(Game):
 
+    #gogo() function starts the scenario
     def gogo(self):
 
         for i in dedent(f"""
@@ -66,6 +67,8 @@ class WejscieSmoka(Game):
                     """):
                 sys.stdout.write(i)
                 time.sleep(0.04)
+                
+        #Combat.attack() loads the fight module
         Combat.attack()
         for i in dedent(f"""
             Wow. Co za pierwsze napotkanie...
@@ -74,13 +77,16 @@ class WejscieSmoka(Game):
             """):
             sys.stdout.write(i)
             time.sleep(0.04)
+            
+        #returns the next scenario
         return 'shoguniada'
 
 
 class Shoguniada(Game):
 
     def gogo(self):
-
+        
+        #changes the HP points setting
         ex45_game_stats.game_stats.defence = 2
 
         for i in dedent(f"""
@@ -107,6 +113,7 @@ class Shoguniada(Game):
             time.sleep(0.04)
             print("Nie rozumiem. Daj pieniążka.")
 
+        #The money handling scene (UKL is the currency of the game).
         prosti_money = input(f"""
         \rMasz {ex45_game_stats.game_stats.pocket_money} UKL w kieszeni.
         Ile pieniędzy chcesz przekazać nieznanej postaci? >
@@ -399,6 +406,7 @@ class Kapsula(Game):
             sys.stdout.write(i)
             time.sleep(0.04)
 
+        #Mid-mission raporting
         raport_liczba = "a"
         while raport_liczba.isnumeric() == False:
             raport_liczba = input("Ile słabych punktów obcych udało ci się rozpracować? > ")
@@ -458,6 +466,7 @@ class Kapsula(Game):
                 time.sleep(0.04)
             return 'raport'
 
+#The supplies-shop
 class Zaopatrz(Game):
 
     def gogo(self):
@@ -477,6 +486,7 @@ class Zaopatrz(Game):
             print("[kup_ochrone], [komunik], [poszukiwanie]")
             wybor_zaopatrz = input("Co chcesz zrobić? > ")
 
+            #Buying the HP protection element
             if wybor_zaopatrz == "kup_ochrone" and ex45_game_stats.game_stats.pocket_money > 69:
                 ex45_game_stats.game_stats.defence = 3
                 ex45_game_stats.game_stats.pocket_money -= 70
@@ -501,7 +511,7 @@ class Zaopatrz(Game):
             else:
                 print("Wpisz proszę poprawnie.")
 
-
+#Spaceship exploration
 class Poszukiwanie(Game):
 
     def gogo(self):
@@ -535,7 +545,7 @@ class Poszukiwanie(Game):
             else:
                 print("Wpisz poprawnie.")
 
-
+#End-of-the-game report mission
 class Raport(Game):
 
     def gogo(self):
@@ -550,10 +560,10 @@ class Raport(Game):
             print(f"\nOto lista potworów które możesz zraportować:\n{Combat.shoguns_list}  lub  [wyjdz]")
             current_obcy = input("Wpisz nazwę obcego do zraportowania. > ")
 
-            # WPISZ POTWORA
+            # TYPE THE MONSTERN
             if current_obcy in Combat.shoguns_list:
 
-                #WPISZ SŁABOŚĆ
+                #TYPE THE WEAKNESS
                 print(f'Ok. Jaką słabość ma {current_obcy}?\n\nTwoje znane rodzaje ataków: {Combat.attacks[0:6]}.')
                 current_obcy_weakness = input("> ")
 
@@ -568,7 +578,7 @@ class Raport(Game):
                     else:
                         pass
 
-                    #SPRAWDZANIE CZY RAPORT JEST POTENCJALNIE GOTOWY
+                    #Checks if there are enough elements in report to submit it
                     l_obcy_raport += 1
                     print(f"\nL. obcych w raporcie: {l_obcy_raport}.\nTwój obecny raport: {raport}")
                     if l_obcy_raport > 4:
@@ -580,9 +590,12 @@ class Raport(Game):
                             print("... Przesyłam raport Komisariuszowi UrsusZB5...")
                             raport_done = True
 
+                            #Checks if the report is correct
                             if len(raport_dobry_obcy) == l_obcy_raport:
+                                #report correct, you win
                                 return 'the-end'
                             else:
+                                #report is wrong, redirects to exploring the spaceship scenario
                                 Combat.shoguns_list = ['Shoghun-ghul', 'Ronin', 'Ninja', 'Unspecified-Undead',
                                                 'Space-assasin', 'Zombie', 'Uzaki-Monk', 'Undead-deity']
                                 for i in dedent(f"""
@@ -612,13 +625,16 @@ class Raport(Game):
                 print('\nWpisz nazwę potwora poprawnie.')
 
 
-
+#The end
 class Ending(Game):
 
     def gogo(self):
         print(f"6Z8-{imie_script.imie_1}, świetna robota. \n------- ZWYCIĘSTWO! HIP HIP HURAH. :) -------\n")
+        
+        #redirects to the winners gift - a compliments generator!
         gen_kompl.Komplement.kompl()
 
+#The maps loader - this class manages the maps loading and the game engine
 class Map():
 
     def __init__(self, start_scene):
@@ -636,11 +652,12 @@ class Map():
                 'death': Death(),
                 'the-end': Ending()
             }
-
+    #loads the following scene
     def next_scene(self, scene_name):
         loading = Map.scenarios.get(scene_name)
         return loading
 
+    #loads the first scene
     def opening_scene(self):
         return self.next_scene(self.start_scene)
 
@@ -654,5 +671,5 @@ class Start():
     def gogo():
         Engine(Map('wejscie_smoka')).play()
 
-
-Start.gogo()
+if __name__ == "__main__":
+    Start.gogo()
