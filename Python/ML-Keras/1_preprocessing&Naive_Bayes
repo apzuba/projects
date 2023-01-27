@@ -6,14 +6,14 @@
    "source": [
     "https://gdcoder.com/sentiment-clas/\n",
     "\n",
-    "To jest zamiast tej części poprzedzającej \"Text data preprocessing\" z tutoriala, ponieważ zastosowany został dataset w innym formacie"
+    "We use a dataset in another format, hence we skip the \"Text data preprocessing\" function."
    ]
   },
   {
    "cell_type": "markdown",
    "metadata": {},
    "source": [
-    "import bibliotek które wykorzystamy do podziału naszego datasetu na zbiór uczący i testowy"
+    "import of the libraries that we use for dividing our dataset into the learning and tests sets"
    ]
   },
   {
@@ -38,7 +38,7 @@
    "cell_type": "markdown",
    "metadata": {},
    "source": [
-    "Ładujemy dataset do zmiennej"
+    #Loading the dataset to a variable"
    ]
   },
   {
@@ -54,7 +54,7 @@
    "cell_type": "markdown",
    "metadata": {},
    "source": [
-    "Sprawdzamy sobie jak wygląda dataset poprzez funkcję head()"
+    "Checking the outlook of the dataset using the head() function"
    ]
   },
   {
@@ -139,7 +139,7 @@
    "cell_type": "markdown",
    "metadata": {},
    "source": [
-    "Zamieniamy wartości tekstowe na liczbowe"
+    "Converting strings into integers."
    ]
   },
   {
@@ -155,7 +155,7 @@
    "cell_type": "markdown",
    "metadata": {},
    "source": [
-    "Tworzymy zbiór wartości (x) oraz etykiet (y)"
+    "Create a new set with values (x) and labels (y)"
    ]
   },
   {
@@ -301,7 +301,7 @@
    "cell_type": "markdown",
    "metadata": {},
    "source": [
-    "Dzielimy zbiory wartosci i etykiet na zbiory do trenowania i testowania naszego klasyfikatora"
+    "Division of the values and labels into series for training and testing for our classificator"
    ]
   },
   {
@@ -404,7 +404,7 @@
    "cell_type": "markdown",
    "metadata": {},
    "source": [
-    "Poniższe histogramy pokazują, że wartości w zbiorach są podzielone po równo - 20000 pozytywnych i 20000 negatywnych w zbiorze treningowym oraz 5000 pozytywnych i 5000 negatywnych w zbiorze testowym"
+    "The below histograms show that the values in the sets are divided equally (2000 positives and 2000 negatives in the training set, as well as 5000 positives and 5000 negatives in the test set"
    ]
   },
   {
@@ -481,7 +481,7 @@
    "cell_type": "markdown",
    "metadata": {},
    "source": [
-    "# Tokenizacja - podział na pojedyncze słowa, bez znaczenia kolejności tych słów"
+    "# Tokenizacja - division of texts into single words, independently of the words order"
    ]
   },
   {
@@ -501,7 +501,7 @@
    "cell_type": "markdown",
    "metadata": {},
    "source": [
-    "Tworzenie dokumentu do zapisu podzielonych słów"
+    "Creating a document to save the divided words"
    ]
   },
   {
@@ -529,7 +529,7 @@
    "cell_type": "markdown",
    "metadata": {},
    "source": [
-    "Wyrzucenie słów o bardzo wysokiej częstotliwości (np. \"i\", \"lub\"), oraz słów rzadkich (powtórzonych mniej niż 5 razy)"
+    "Popping out the high frequency words (eg. \"i\", \"lub\"), and rare words (with frequency lower than 5)"
    ]
   },
   {
@@ -557,7 +557,7 @@
    "cell_type": "markdown",
    "metadata": {},
    "source": [
-    "Liczymy wymiary arkusza oraz ilość elementów"
+    "Counting the array size and the number of elements"
    ]
   },
   {
@@ -617,7 +617,7 @@
    "cell_type": "markdown",
    "metadata": {},
    "source": [
-    "Wyświetla słowa pod pozycjami od 5000 do 5005."
+    "Displays words under positions from 5000 to 5005."
    ]
   },
   {
@@ -644,7 +644,7 @@
    "cell_type": "markdown",
    "metadata": {},
    "source": [
-    "Wyświetla pozycję słowa 'aproved'"
+    "Displays the position of the word 'aproved'"
    ]
   },
   {
@@ -672,7 +672,7 @@
    "cell_type": "markdown",
    "metadata": {},
    "source": [
-    "Przeszukiwanie słów"
+    "Searching the words"
    ]
   },
   {
@@ -740,7 +740,7 @@
    "cell_type": "markdown",
    "metadata": {},
    "source": [
-    "# Implementacja Naiwnego klasyfikatora Bayesa"
+    "# Implementing Naive Bayes classificator"
    ]
   },
   {
@@ -795,7 +795,7 @@
    "cell_type": "markdown",
    "metadata": {},
    "source": [
-    "Wynik podstawowego modelu"
+    "The result of the basic model"
    ]
   },
   {
@@ -827,7 +827,7 @@
    "cell_type": "markdown",
    "metadata": {},
    "source": [
-    "Usprawnienie modelu poprzez binaryzację wartości słów (brak podwójnego liczenia)"
+    "Improving the model through the binarisation of the words values (ommitting double counting)"
    ]
   }
  ],
