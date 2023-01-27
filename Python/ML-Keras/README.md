@@ -1,4 +1,4 @@
-#Project: Modelling semantic, machine-learning-based text analysis. 
+#Project: Models of Machine Learning based semantic text analysis. 
 
 @authors: Adam Zuba, Paweł Ciślik, Agnija Bogdaniuk, Supervision: prof. dr. hab. inż. Grzegorz Nalepa
 
