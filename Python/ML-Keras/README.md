@@ -4,7 +4,7 @@
 
 Regonising the semantic valence of a text is a complex function. The goal of the project was to train and choose the best Machine Learning model for recognising the emotional valence of a text, adjusting for the multi-factor influences. The models were trained and used in both the English and Polish languages. The database for the Polish langauge was scrapped with a script from the internet (from a populer film reviews website - filmweb.pl).
 
-The project was developed in Jupyter Notebook IDE, using Keras ML framework with TensorFlow backend, following an online Machine-Learning Tutorial and under a supervisor of prof. dr. hab. inż. Grzegorz Nalepa. The project was a course project for the class of Workshops in Cognitive Engineering at Jagiellonian University. The project group involved three students.
+The project was developed in Jupyter Notebook IDE, using Keras ML framework with TensorFlow backend, following an online Machine-Learning Tutorial and under a supervisor of prof. dr. hab. inż. Grzegorz Nalepa. The project was a course project for the class of Workshops in Cognitive Engineering at Jagiellonian University.
 
 I attatch the saved Jupyter output files from the stages of: 
 PL: 
