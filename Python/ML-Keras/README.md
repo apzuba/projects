@@ -17,7 +17,7 @@ EN:
 
 1) Full script for data preprocessing and implementation of the three Neural Networks.
 
-
+______________
 The project implemented:
 
 - Selected filters, machine learning techniques, and text complexity.
