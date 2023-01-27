@@ -31,4 +31,4 @@ PL:
 
 EN: 
 
-1) Full scriptt for data preprocessing and implementation of the three Neural Networks.
+1) Full script for data preprocessing and implementation of the three Neural Networks.
