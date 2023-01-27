@@ -29,6 +29,7 @@ app.config['TEMPLATES_AUTO_RELOAD'] = True
 
 db = SQLAlchemy(app)
 
+#Class for handling the user data within the SQL database
 class User(db.Model):
     id = db.Column(db.Integer, primary_key=True)
     username = db.Column(db.String(100), nullable=False)
@@ -41,8 +42,7 @@ class User(db.Model):
         return f'<User {self.username}> '
 
 
-#AUTH functions
-
+#AUTH and security decorators 
 def login_req(f):
     @wraps(f)
     def decorated_function(*args, **kwargs):
@@ -84,7 +84,7 @@ def del_try():                  #Counter function
         out = try_del_value.value
     return jsonify(count=out)
 
-
+#Checks if the user is already logged in.
 @app.before_request
 def before_request():
     users = User.query.all()
@@ -95,6 +95,7 @@ def before_request():
     except:
         pass
 
+#The landing page - Login.
 @app.route('/', methods=['POST', 'GET'])
 
 def login():
@@ -113,19 +114,24 @@ def login():
         try:
             user = [x for x in users if x.username == username][0]
 
+            #if user typed in admin login and password, it will redirect to the admin page
             if username == "admin" and user.password == password:
                 session['user_id'] = user.id
                 session['username'] = user.username
                 return redirect(url_for('admin'))
 
+            #if user login and password is correct, it will redirect to the start of the game
             elif user and user.password == password:
                 session['user_id'] = user.id
                 return redirect(url_for('index'))
 
+            #handles wrong password typed in
             else:
                 new_user.clear()
                 new_user.append(2)
                 return redirect(url_for('login', new_user=new_user[0] ))
+            
+        #handles no such user typed in
         except:
             new_user.clear()
             new_user.append(1)
@@ -137,13 +143,14 @@ def login():
         new_user.clear()
         return render_template('login.html')
 
+#The admin page
 @app.route('/admin', methods=['POST', 'GET'])
 @admin_login_required
 def admin():
     users = User.query.all()
     return render_template('admin.html', users=users)
 
-
+#The register new user page
 @app.route('/register', methods=['POST', 'GET'])
 def register():
     users = User.query.all()
@@ -152,11 +159,14 @@ def register():
         f_username = request.form['f_username']
         f_password = request.form['f_password']
 
+       #checks if the user currently exists
         try:
             user = [x for x in users if x.username == f_username][0]
             new_user.clear()
             new_user.append(19)
             return redirect(url_for("login"))
+        
+        #adds the new user to the SQL database and redirects to the login page
         except:
             user = User(username=f_username,
                           password= f_password,
@@ -170,6 +180,7 @@ def register():
 
     return render_template('register.html')
 
+# The delete user page
 @app.route('/delete/', methods=['POST', 'GET'])
 def delete():
     users = User.query.all()
@@ -178,7 +189,7 @@ def delete():
         password = request.form['password']
         try:
             user = [x for x in users if x.username == username][0]
-            if user and user.password == password:          #password is correct, so we delete the account
+            if user and user.password == password:          #password is correct, deleting the account
                 user_del = User.query.get_or_404(user.id) 
                 db.session.delete(user_del)
                 db.session.commit()
@@ -186,26 +197,25 @@ def delete():
                 new_user.append(7)
                 return redirect(url_for('login', new_user=new_user[0]))
 
-        #it doesn't get here
-            elif try_del_value.value < 3:    #password incorrect, two more chances to type the correct one
+            elif try_del_value.value < 3:     #password incorrect, up to two more chances to type the correct one
                 new_user.clear()
                 new_user.append(8)
                 del_try()
                 return render_template('delete.html', new_user=new_user[0])
 
-            else:                                             #password incorrect, no more tries left
+            else:                             #password incorrect, no more tries left. Redirects to the login page
                 new_user.clear()
                 new_user.append(9)
                 return render_template('login.html', new_user=new_user[0])
 
-        except:
+        except:                               #No such user in the database, up to two more tries again 
             new_user.clear()
             new_user.append(8)
             del_try()
             return redirect(url_for('delete'))
     return render_template('delete.html')
 
-
+#The method to delete from the admin panel
 @app.post('/delete_by_id/')
 def delete_by_id():
      userID = request.args.get('user_id')
@@ -214,6 +224,7 @@ def delete_by_id():
      db.session.commit()
      return redirect(url_for('admin'))
 
+#Logout method
 @app.route('/logout/')
 def logout():
      session.pop('user_id', None)
@@ -221,14 +232,14 @@ def logout():
      new_user.clear()
      return redirect(url_for('login',new_user=None))
 
-
+#Index page that loads starting values for the game
 @app.route('/index', methods=['POST', 'GET'])
 def index():
     # "setup" the session with starting values
     session['room_name'] = planisphere.START
     return redirect(url_for("game"))
 
-
+#The starting game page with the game engine
 @app.route("/game", methods=['GET', 'POST'])
 @login_req
 def game():
@@ -244,6 +255,7 @@ def game():
             return render_template("you_died.html")
 
     else:
+        #loads the next room based on the user choice in the game
         action = request.form.get('action')
 
         if room_name and action:
