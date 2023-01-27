@@ -26,8 +26,8 @@ I attatch the saved Jupyter output files from the stages of:
 PL: 
 
 1) Data scrapping script 
-2) 2) Preprocessing + implementing Naive Bayes 
-3) 3) implementation of the three ML models.; 
+2) Preprocessing + implementing Naive Bayes 
+3) Implementation of the three ML models.; 
 
 EN: 
 
